@@ -1,3 +1,4 @@
+<?= $this->extend('public/layout') ?>
 <?php
 $url = base_url() . 'pages/show/' . $vehicle['v_id'];
 $title = $vehicle['manufacturer_name'] . ' ' . $vehicle['model_name'] . ' ' . $vehicle['category'];

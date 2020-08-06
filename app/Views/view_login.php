@@ -24,7 +24,7 @@
     </div>
     <footer style="position: absolute; bottom: 0px">
         <center>
-            <img src="assets/images/logo.png" style="max-height: 100px;">
+            <img src="<?php echo base_url('assets/images/logo.svg'); ?>" style="max-height: 100px;">
             <div>Copyright <?php echo date('Y'); ?></div>
         </center>
     </footer>

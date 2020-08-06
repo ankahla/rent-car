@@ -2,10 +2,10 @@
 
 <?= $this->section('content') ?>
     <div class="banner">
-        <!-- 		<video width="100%" autoplay loop>
+         		<video width="100%" autoplay muted loop>
                     <source src="assets/motors-landing.mp4" type="video/mp4">
                         Your browser does not support the video tag.
-                </video> -->
+                </video>
         <div class="container">
             <!-- 		<script src="<?= base_url('public/assets/js/responsiveslides.min.js'); ?>"></script>
 		<script>
@@ -19,7 +19,7 @@
 		});
 		});
 		</script> -->
-            <div id="top" class="callbacks_container">
+            <!--<div id="top" class="callbacks_container">
                 <ul class="rslides" id="slider">
                     <li>
 
@@ -47,7 +47,7 @@
 
                     </li>
                 </ul>
-            </div>
+            </div>-->
         </div>
     </div>
     <!--content-->
@@ -78,22 +78,22 @@
                     <h1>NOUVEAUX</h1>
 
                     <div class="grid-in">
-                        {vehicles}
+                        <?php foreach($vehicles as $vehicle): ?>
                         <div class="col-md-3 grid-top simpleCart_shelfItem">
-                            <a href="<?= base_url(); ?>pages/show/{vehicle_id}"
+                            <a href="<?= base_url('pages/show/'.$vehicle->vehicle_id); ?>"
                                class="b-link-stripe b-animate-go  thickbox">
-                                <img class="img-responsive" src="<?= base_url('uploads/'); ?>/{image}" alt="">
+                                <img class="img-responsive" src="<?= base_url('uploads/'.$vehicle->image); ?>" alt="">
                                 <div class="b-wrapper">
                                     <h3 class="b-animate b-from-left    b-delay03 ">
-                                        <span>{model_name}</span>
+                                        <span><?php echo $vehicle->model_name ?></span>
 
                                     </h3>
                                 </div>
                             </a>
 
-                            <p><a href="single.html">{model_name}</a></p>
+                            <p><a href="single.html"><?php echo $vehicle->model_name ?></a></p>
                         </div>
-                        {/vehicles}
+                        <?php endforeach; ?>
                         <div class="clearfix"></div>
                     </div>
                 </div>

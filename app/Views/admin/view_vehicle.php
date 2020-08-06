@@ -164,7 +164,9 @@
             </div><!-- /x-panel -->
         </div> <!-- /col -->
     </div> <!-- /row -->
+<?= $this->endsection() ?>
 
+<?= $this->section('javascripts') ?>
     <script src="<?php echo base_url("assets/bootstrap-datepicker.js"); ?>"></script>
     <script src="<?php echo base_url("assets/vendors/datatables.net/js/jquery.dataTables.min.js"); ?>"></script>
     <script src="<?php echo base_url("assets/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"); ?>"></script>
@@ -178,7 +180,7 @@
     <script src="<?php echo base_url("assets/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"); ?>"></script>
     <script src="<?php echo base_url("assets/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"); ?>"></script>
     <!-- <script src="<?php echo base_url("assets/vendors/datatables.net-scroller/js/datatables.scroller.min.js"); ?>"></script> -->
-    <script src="<?php echo base_url("assets/vendors/jszip/dist/jszip.min.js"); ?>"></script>
+    <script src="<?php echo base_url("assets/js/jszip.min.js"); ?>"></script>
     <script src="<?php echo base_url("assets/vendors/pdfmake/build/pdfmake.min.js"); ?>"></script>
     <script src="<?php echo base_url("assets/vendors/pdfmake/build/vfs_fonts.js"); ?>"></script>
 
@@ -187,8 +189,8 @@
             var handleDataTableButtons = function () {
                 if ($("#datatable-responsive").length) {
                     $("#datatable-responsive").DataTable({
-                        "language": {
-                            "url": "../assets/build/js/datatable.french.json"
+                        'language': {
+                            'url': '<?php echo base_url('assets/js/datatable.french.json'); ?>'
                         },
                         aaSorting: [[0, 'desc']],
 
@@ -198,35 +200,35 @@
                                 extend: "copy",
                                 className: "btn-sm",
                                 exportOptions: {
-                                    columns: [0, 1, 2, 3, 4, 5, 6]
+                                    columns: [4, 5, 6, 7, 8]
                                 }
                             },
                             {
                                 extend: "csv",
                                 className: "btn-sm",
                                 exportOptions: {
-                                    columns: [0, 1, 2, 3, 4, 5, 6]
+                                    columns: [4, 5, 6, 7, 8]
                                 }
                             },
                             {
                                 extend: "excel",
                                 className: "btn-sm",
                                 exportOptions: {
-                                    columns: [0, 1, 2, 3, 4, 5, 6]
+                                    columns: [4, 5, 6, 7, 8]
                                 }
                             },
                             {
                                 extend: "pdf",
                                 className: "btn-sm",
                                 exportOptions: {
-                                    columns: [0, 1, 2, 3, 4, 5, 6]
+                                    columns: [4, 5, 6, 7, 8]
                                 }
                             },
                             {
                                 extend: "print",
                                 className: "btn-sm",
                                 exportOptions: {
-                                    columns: [0, 1, 2, 3, 4, 5, 6]
+                                    columns: [4, 5, 6, 7, 8]
                                 }
                             },
                         ],
@@ -249,11 +251,7 @@
         });
     </script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            jQuery('input.datepicker').datepicker({
-                format: 'dd/mm/yyyy',
-            });
-
+        jQuery(document).ready(function(){
             $("#parent_cat").change(function () {
                 $(this).after();
                 $.get('<?php echo base_url('controller_vehicle/getsub/'); ?>' + $(this).val(), function (data) {

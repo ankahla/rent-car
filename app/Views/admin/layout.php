@@ -13,7 +13,7 @@ $user = $session->get();
     <title>Rent a car</title>
 
     <!-- Bootstrap -->
-    <link href="<?php echo base_url("assets/vendors/bootstrap/dist/css/bootstrap.min.css"); ?>" rel="stylesheet">
+    <link href="<?php echo base_url("assets/css/bootstrap.css"); ?>" rel="stylesheet">
     <!--date picker -->
     <link href="<?php echo base_url("assets/datepicker3.css"); ?>" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
@@ -25,7 +25,7 @@ $user = $session->get();
     <!-- sweet-alert -->
     <link href="<?php echo base_url("assets/vendors/sweetalert/sweetalert.css"); ?>" rel="stylesheet">
 
-    <link href="<?php echo base_url("assets/vendors/pnotify/dist/pnotify.css"); ?>" rel="stylesheet">
+    <link href="<?php echo base_url("assets/css/pnotify.css"); ?>" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="<?php echo base_url("assets/css/custom.css"); ?>" rel="stylesheet">
@@ -159,9 +159,9 @@ $user = $session->get();
 </div>
 
 <!-- jQuery -->
-<script src="<?php echo base_url('assets/vendors/jquery/dist/jquery.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
 <!-- Bootstrap -->
-<script src="<?php echo base_url("assets/vendors/bootstrap/dist/js/bootstrap.min.js"); ?> "></script>
+<script src="<?php echo base_url("assets/js/bootstrap.min.js"); ?> "></script>
 <!-- daterangepicker -->
 <script src="<?php echo base_url("assets/vendors/moment/moment.js"); ?> "></script>
 <script src="<?php echo base_url("assets/vendors/bootstrap-daterangepicker/daterangepicker.js"); ?> "></script>
@@ -171,9 +171,9 @@ $user = $session->get();
 <script src="<?php echo base_url('assets/vendors/nprogress/nprogress.js'); ?>"></script>
 <!-- sweetalert -->
 <script src="<?php echo base_url('assets/vendors/sweetalert/sweetalert.min.js'); ?>"></script>
-<script src="<?php echo base_url('assets/vendors/pnotify/dist/pnotify.js'); ?>"></script>
+<script src="<?php echo base_url('assets/js/pnotify.js'); ?>"></script>
 <!-- Chart.js -->
-<script src="<?php echo base_url('assets/vendors/Chart.js/dist/Chart.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/js/Chart.min.js'); ?>"></script>
 <!-- Custom Theme Scripts -->
 <script src="<?php echo base_url('assets/js/custom.js'); ?>"></script>
 <script src="<?php echo base_url("assets/bootstrap-datepicker.js"); ?>"></script>

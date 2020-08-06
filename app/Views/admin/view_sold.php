@@ -127,7 +127,7 @@
 <script src="<?php echo base_url("assets/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"); ?>"></script>
 <script src="<?php echo base_url("assets/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"); ?>"></script>
 <script src="<?php echo base_url("assets/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"); ?>"></script>
-<script src="<?php echo base_url("assets/vendors/jszip/dist/jszip.min.js"); ?>"></script>
+<script src="<?php echo base_url("assets/js/jszip.min.js"); ?>"></script>
 <script src="<?php echo base_url("assets/vendors/pdfmake/build/pdfmake.min.js"); ?>"></script>
 <script src="<?php echo base_url("assets/vendors/pdfmake/build/vfs_fonts.js"); ?>"></script>
 

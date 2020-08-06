@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>RENT A CAR</title>
-    <link href="<?= base_url('assets/vendors/bootstrap/dist/css/bootstrap.min.css'); ?> " rel="stylesheet"
+    <link href="<?= base_url('assets/css/bootstrap.css'); ?> " rel="stylesheet"
           type="text/css" media="all"/>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="<?= base_url('assets/js/jquery.min.js'); ?>"></script>
