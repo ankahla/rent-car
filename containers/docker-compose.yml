@@ -16,6 +16,7 @@ services:
             - "../:/var/www/:delegated"
         environment:
             - DATABASE_URL=mysql://root:root@rentcar_db/rentcar
+            - baseURL=http://localhost:8080
     rentcar_db:
         build:
             context: mysql

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Administration</title>
-    <link rel="stylesheet" href="<?php echo base_url('assets/build/css/login.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/login.css'); ?>">
 </head>
 
 <body>

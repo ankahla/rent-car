@@ -87,7 +87,7 @@ class Database extends \CodeIgniter\Database\Config
 	{
 	    // parse DSN for mysqli driver
 	    if (self::DRIVER_MYSQLI === $this->default['DBDriver']) {
-	        if (!empty($dsn = getenv('database.default.DSN'))) {
+	        if (!empty($dsn = getenv('DATABASE_URL'))) {
                 $db = parse_url($dsn);
 
                 if ($db) {

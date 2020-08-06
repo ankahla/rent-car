@@ -28,7 +28,7 @@ $user = $session->get();
     <link href="<?php echo base_url("assets/vendors/pnotify/dist/pnotify.css"); ?>" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="<?php echo base_url("assets/build/css/custom.min.css"); ?>" rel="stylesheet">
+    <link href="<?php echo base_url("assets/css/custom.css"); ?>" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -175,7 +175,7 @@ $user = $session->get();
 <!-- Chart.js -->
 <script src="<?php echo base_url('assets/vendors/Chart.js/dist/Chart.min.js'); ?>"></script>
 <!-- Custom Theme Scripts -->
-<script src="<?php echo base_url('assets/build/js/custom.js'); ?>"></script>
+<script src="<?php echo base_url('assets/js/custom.js'); ?>"></script>
 <script src="<?php echo base_url("assets/bootstrap-datepicker.js"); ?>"></script>
 
 <script type="text/javascript">
