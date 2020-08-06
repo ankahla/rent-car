@@ -8,6 +8,8 @@
 
 class Database extends \CodeIgniter\Database\Config
 {
+    private const DRIVER_MYSQLI = 'MySQLi';
+
 	/**
 	 * The directory that holds the Migrations
 	 * and Seeds directories.
@@ -31,11 +33,11 @@ class Database extends \CodeIgniter\Database\Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'localhost',
+		'hostname' => '',
 		'username' => '',
 		'password' => '',
 		'database' => '',
-		'DBDriver' => 'MySQLi',
+		'DBDriver' => self::DRIVER_MYSQLI,
 		'DBPrefix' => '',
 		'pConnect' => false,
 		'DBDebug'  => (ENVIRONMENT !== 'production'),
@@ -83,6 +85,20 @@ class Database extends \CodeIgniter\Database\Config
 
 	public function __construct()
 	{
+	    // parse DSN for mysqli driver
+	    if (self::DRIVER_MYSQLI === $this->default['DBDriver']) {
+	        if (!empty($dsn = getenv('database.default.DSN'))) {
+                $db = parse_url($dsn);
+
+                if ($db) {
+                    $this->default['hostname'] = $db['host'] ?? $this->default['hostname'];
+                    $this->default['username'] = $db['user'] ?? $this->default['hostname'];
+                    $this->default['password'] = $db['pass'] ?? $this->default['hostname'];
+                    $this->default['database'] = isset($db['pass']) ? ltrim($db['path'], '/') : $this->default['database'];
+                }
+            }
+        }
+
 		parent::__construct();
 
 		// Ensure that we always set the database group to 'tests' if
